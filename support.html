@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>支持与帮助 — 轻律</title>
+  <meta name="description" content="轻律 App 使用帮助、常见问题解答与联系方式。">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', sans-serif; background: #F7FAF8; color: #1A1A1A; line-height: 1.7; }
+    a { color: #3CB371; text-decoration: none; }
+    nav { background: #fff; border-bottom: 1px solid #E8F5EC; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 56px; position: sticky; top: 0; z-index: 100; }
+    .nav-logo { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 17px; color: #1A1A1A; }
+    .nav-logo-mark { width: 32px; height: 32px; background: #3CB371; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #fff; font-weight: 800; font-size: 15px; }
+    .container { max-width: 720px; margin: 0 auto; padding: 48px 24px 80px; }
+    h1 { font-size: 32px; font-weight: 800; color: #1A1A1A; margin-bottom: 8px; }
+    .subtitle { font-size: 16px; color: #666; margin-bottom: 48px; }
+
+    .contact-card { background: #fff; border-radius: 16px; padding: 28px; margin-bottom: 40px; display: flex; gap: 20px; align-items: flex-start; border: 1.5px solid #E8F5EC; }
+    .contact-icon { font-size: 32px; flex-shrink: 0; }
+    .contact-title { font-size: 16px; font-weight: 700; color: #1A1A1A; margin-bottom: 4px; }
+    .contact-desc { font-size: 14px; color: #666; }
+    .contact-link { display: inline-block; margin-top: 8px; font-size: 14px; font-weight: 600; color: #3CB371; }
+
+    h2 { font-size: 20px; font-weight: 700; color: #1A1A1A; margin: 40px 0 16px; }
+    .faq-item { background: #fff; border-radius: 12px; padding: 20px; margin-bottom: 12px; cursor: pointer; border: 1px solid #E8E8E8; }
+    .faq-q { font-size: 15px; font-weight: 600; color: #1A1A1A; display: flex; justify-content: space-between; align-items: center; }
+    .faq-a { font-size: 14px; color: #555; margin-top: 12px; line-height: 1.7; display: none; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-q::after { content: '−'; }
+    .faq-q::after { content: '+'; font-size: 20px; color: #3CB371; font-weight: 300; }
+
+    footer { background: #1A1A1A; color: #999; padding: 32px 24px; text-align: center; font-size: 13px; }
+    .footer-links { display: flex; gap: 24px; justify-content: center; margin-bottom: 12px; flex-wrap: wrap; }
+    .footer-links a { color: #999; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <div class="nav-logo-mark">轻</div>
+    轻律
+  </a>
+</nav>
+
+<div class="container">
+  <h1>支持与帮助</h1>
+  <p class="subtitle">我们希望你的轻断食之旅顺顺利利，有任何问题都可以联系我们。</p>
+
+  <div class="contact-card">
+    <div class="contact-icon">📧</div>
+    <div>
+      <div class="contact-title">邮件支持</div>
+      <div class="contact-desc">工作日 24 小时内回复，周末可能稍有延迟。</div>
+      <a href="mailto:support@qinglv.app" class="contact-link">support@qinglv.app</a>
+    </div>
+  </div>
+
+  <div class="contact-card">
+    <div class="contact-icon">📱</div>
+    <div>
+      <div class="contact-title">应用内反馈</div>
+      <div class="contact-desc">在 App 中：我的 → 帮助与反馈，可直接提交问题截图。</div>
+    </div>
+  </div>
+
+  <h2>常见问题</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">断食计时器关闭 App 后还在运行吗？</div>
+    <div class="faq-a">是的。断食计时器使用后台持久化方案，关闭 App 不会中断计时。你还可以开启推送通知，在断食开始和进食窗口打开时收到提醒。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">如何更改我的断食计划？</div>
+    <div class="faq-a">在「计划」页面，点击当前计划卡片即可查看所有可用方案，选择新方案后点击「开始」即可切换。建议每次调整后给身体 1-2 周的适应期。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">会员购买后如何恢复？</div>
+    <div class="faq-a">如果换设备或重新安装 App，在「我的」→「会员中心」→「恢复购买」即可恢复之前的订阅。需确保使用同一个 Apple ID 登录。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">如何取消订阅？</div>
+    <div class="faq-a">轻律的订阅通过 Apple App Store 管理。请前往：iPhone 设置 → Apple ID → 订阅 → 轻律，即可管理或取消订阅。取消后当前订阅期内仍可正常使用。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">App 支持哪些设备？</div>
+    <div class="faq-a">轻律目前支持 iOS 15.1 及以上系统的 iPhone 和 iPad。未来将推出 Android 版本，敬请期待。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">我的数据安全吗？</div>
+    <div class="faq-a">你的健康数据存储在设备本地，我们不会在未经授权的情况下上传或共享。详情请查阅我们的<a href="privacy.html">隐私政策</a>。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">断食期间可以喝水吗？</div>
+    <div class="faq-a">可以，甚至应该多喝水。断食期间允许喝水、黑咖啡（不加糖和奶）和无糖茶，这些不会中断断食状态。轻律的饮水记录功能可以帮助你保持充足水分。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">如何申请退款？</div>
+    <div class="faq-a">轻律的购买由 Apple 处理。如需申请退款，请访问 reportaproblem.apple.com，使用购买时的 Apple ID 登录并提交退款申请。我们也欢迎你先联系我们的支持团队，我们会尽力解决你的问题。</div>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">首页</a>
+    <a href="privacy.html">隐私政策</a>
+    <a href="terms.html">服务条款</a>
+    <a href="mailto:support@qinglv.app">support@qinglv.app</a>
+  </div>
+  <p>© 2026 轻律健康. 保留所有权利.</p>
+</footer>
+
+<script>
+  document.querySelectorAll('.faq-item').forEach(item => {
+    item.addEventListener('click', () => item.classList.toggle('open'));
+  });
+</script>
+</body>
+</html>
