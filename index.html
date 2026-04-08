@@ -74,6 +74,14 @@
     .footer-links a { color: #999; }
     .footer-links a:hover { color: #3CB371; }
 
+    /* Email Capture */
+    .email-capture { padding: 80px 24px; text-align: center; background: #fff; }
+    .email-inner { max-width: 560px; margin: 0 auto; }
+    .email-form { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .email-input { padding: 14px 20px; border: 1.5px solid #D0D0D0; border-radius: 12px; font-size: 15px; width: 280px; outline: none; transition: border-color 0.15s; }
+    .email-input:focus { border-color: #3CB371; }
+    .email-btn { border: none; cursor: pointer; }
+
     @media (max-width: 600px) {
       .hero h1 { font-size: 30px; }
       .hero p { font-size: 16px; }
@@ -195,6 +203,22 @@
   </div>
 </section>
 
+<section class="email-capture" id="notify">
+  <div class="email-inner">
+    <div class="section-label">抢先体验</div>
+    <div class="section-title">订阅轻律，获取健康资讯</div>
+    <p style="color:#666;font-size:15px;margin-bottom:24px;max-width:480px;margin-left:auto;margin-right:auto;">留下邮箱，第一时间获取新功能更新、断食指南和独家会员优惠。我们不会发送垃圾邮件。</p>
+    <form action="https://formsubmit.co/support@qinglv.app" method="POST" class="email-form" id="email-form">
+      <input type="email" name="email" placeholder="输入你的邮箱" required class="email-input">
+      <input type="hidden" name="_subject" value="轻律官网订阅">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://fisher0012.github.io/qinglv-website/#notify">
+      <button type="submit" class="btn-primary email-btn">免费订阅</button>
+    </form>
+    <div id="email-success" style="display:none;color:#3CB371;font-weight:600;margin-top:16px;">订阅成功！感谢你的关注</div>
+  </div>
+</section>
+
 <div class="download">
   <div class="download-card">
     <h2>立即开始你的健康旅程</h2>
@@ -214,5 +238,20 @@
   <p>© 2026 轻律健康. 保留所有权利.</p>
 </footer>
 
+<script>
+document.getElementById('email-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+  var form = this;
+  var btn = form.querySelector('button');
+  btn.textContent = '提交中...';
+  btn.disabled = true;
+  fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } })
+    .then(function(r) {
+      if (r.ok) { form.style.display = 'none'; document.getElementById('email-success').style.display = 'block'; }
+      else { btn.textContent = '免费订阅'; btn.disabled = false; alert('提交失败，请稍后重试'); }
+    })
+    .catch(function() { btn.textContent = '免费订阅'; btn.disabled = false; alert('网络错误，请稍后重试'); });
+});
+</script>
 </body>
 </html>
